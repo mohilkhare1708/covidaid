@@ -1,0 +1,37 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<section class="section section-header text-dark pb-md-8">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 text-center mb-5 mb-md-7">
+                <h1 class="display-2 font-weight-bolder mb-4">
+                    CovidAid
+                </h1>
+                <p class="lead mb-4 mb-lg-5">A helping hand to the help needers and providers. This application connects the help seekers and providers using the power of social media.</p>
+                <div>
+                    <a href="{% url 'need-help' %}" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                        <span class="d-flex align-items-center">
+                            <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-ambulance"></span></span>
+                            <span class="d-inline-block text-left">
+                                <small class="font-weight-normal d-none d-md-block">Need</small> Help
+                            </span> 
+                        </span>
+                    </a>
+                    <a href="{% url 'do-help' %}" class="btn btn-dark btn-download-app">
+                        <span class="d-flex align-items-center">
+                            <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-hands-helping"></span></span>
+                            <span class="d-inline-block text-left">
+                                <small class="font-weight-normal d-none d-md-block">Do</small> Help
+                            </span> 
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <div class="col-12 col-md-10 justify-content-center">
+                <img class="d-none d-md-inline-block" src="{% static 'images/nocovid.png' %}" alt="Mobile App Mockup" style="max-width=50% !important;">
+            </div> {% endcomment %}
+        </div>
+    </div>
+</section>
+{% endblock content %}
