@@ -2,12 +2,15 @@ from django.shortcuts import render, redirect
 from mainapp.forms import CityForm
 import tweepy,json
 from tweepy.streaming import StreamListener
+from dotenv import load_dotenv
+import os
 
-access_token="717644539167526912-MFhr46JcY1XxJo7mXG8tYxxPn4E84Bs"
-access_token_secret="yPcmazV805V8AYZTjBHPtGC4HBVjxEOz26WxCM0oQSss7"
-consumer_key="o4J8U2DNIhRH28VwDO9RJIPpQ"
-consumer_secret="HM6RMEKahZmswQ3hQzWKlQkB5PM100wiHcMftXISypkDXdorCL"
+load_dotenv()
 
+access_token = os.getenv('access_token')
+access_token_secret = os.getenv('access_token_secret')
+consumer_key = os.getenv('consumer_key')
+consumer_secret = os.getenv('consumer_secret')
 
 class TwitterStreamer():
     def __init__(self):
