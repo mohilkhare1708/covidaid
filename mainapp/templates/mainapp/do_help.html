@@ -1,6 +1,9 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
+{% block title %}
+{{title}}
+{% endblock %}
 {% block content %}
 <section class="section section-header text-dark pb-md-8">
     <div class="container">
@@ -19,19 +22,20 @@
                         <div class="form-group">
                             <button class="btn btn-dark btn-download-app" type="submit">
                                 <span class="d-flex align-items-center">
-                                    <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-hands-helping"></span></span>
+                                    <span class="icon icon-brand mr-2 mr-md-3"><span
+                                            class="fas fa-hands-helping"></span></span>
                                     <span class="d-inline-block text-left">
                                         <small class="font-weight-normal d-none d-md-block">Do</small> Help
-                                    </span> 
+                                    </span>
                                 </span>
-                            </a>
                         </div>
-					</form>
-                    
+                    </form>
+
                 </div>
             </div>
             {% comment %} <div class="col-12 col-md-10 justify-content-center">
-                <img class="d-none d-md-inline-block" src="{% static 'images/nocovid.png' %}" alt="Mobile App Mockup" style="max-width=50% !important;">
+                <img class="d-none d-md-inline-block" src="{% static 'images/nocovid.png' %}" alt="Mobile App Mockup"
+                    style="max-width=50% !important;">
             </div> {% endcomment %}
         </div>
     </div>
@@ -40,5 +44,5 @@
 {% block extrascripts %}
 <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhGQjAU2jvQHVGyW-u2hD9BbviWmpwp2Q&libraries=places&callback=initMap">
-</script>
+    </script>
 {% endblock extrascripts %}
