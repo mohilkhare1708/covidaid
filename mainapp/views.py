@@ -21,7 +21,7 @@ class TwitterStreamer():
         auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
         auth.set_access_token(access_token,access_token_secret)
         stream = tweepy.Stream(auth, listener)
-        stream.filter(track=hash_tag_list)
+        stream.filter(track=['oxygen', 'remdesivir'])#hash_tag_list)
 
 class StdOutListener(StreamListener):
     def on_data(self, data):
@@ -59,8 +59,10 @@ def do_help(request):
     return render(request, 'mainapp/do_help.html', context)
 
 def results(request, cityName, req):
-    #req.append(cityName)
-    req = req.strip('][').split(', ')
+    # req.append(cityName)
+    # print(req)
+    # req = req.strip('][').split(', ')
+    # print(req)
     twitter_streamer = TwitterStreamer()
     twitter_streamer.stream_tweets(req)
     return render(request, 'mainapp/results.html', {'city' : cityName, 'req' : req})

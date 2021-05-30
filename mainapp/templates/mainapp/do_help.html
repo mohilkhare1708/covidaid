@@ -17,7 +17,7 @@
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <fieldset class="form-group">
-                            {{ form|crispy }}
+                            <input id="autocomplete" placeholder="Enter the name of the city" type="text" />
                         </fieldset>
                         <div class="form-group">
                             <button class="btn btn-dark btn-download-app" type="submit">
@@ -42,7 +42,18 @@
 </section>
 {% endblock content%}
 {% block extrascripts %}
-<script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhGQjAU2jvQHVGyW-u2hD9BbviWmpwp2Q&libraries=places&callback=initMap">
+    <script>
+    function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById('autocomplete'),
+            {
+                types: ['(regions)'],
+                componentRestrictions: {'country': ['IN']},
+                fields: ['places_id', 'geometry', 'name']
+            });
+    }
+    </script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-VVJtUXdLwSYPs1tsaeveJE8E_XhXD8&libraries=places&callback=initAutocomplete">
     </script>
 {% endblock extrascripts %}

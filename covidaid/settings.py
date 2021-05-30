@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # made by me
     'mainapp.apps.MainappConfig',
     'crispy_forms',
+    'places',
     # preinstalled
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,3 +127,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+PLACES_MAPS_API_KEY='AIzaSyAYIDfu6OvKvXKZiSV3RvBZIEDWTSkomPw'
+PLACES_MAP_WIDGET_HEIGHT=480
+PLACES_MAP_OPTIONS='{"center": { "lat": 38.971584, "lng": -95.235072 }, "zoom": 10}'
+PLACES_MARKER_OPTIONS='{"draggable": true}'
+
