@@ -5,6 +5,21 @@
 {{title}}
 {% endblock %}
 {% block content %}
+<style>
+input {
+    margin-bottom: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+form {
+    margin-top: 50px;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+</style>
 <section class="section section-header text-dark pb-md-8">
     <div class="container">
         <div class="row justify-content-center">
@@ -17,7 +32,7 @@
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <fieldset class="form-group">
-                            <input id="autocomplete" placeholder="Enter the name of the city" type="text" />
+                            {{form|crispy}}
                         </fieldset>
                         <div class="form-group">
                             <button class="btn btn-dark btn-download-app" type="submit">
@@ -45,7 +60,7 @@
     <script>
     function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
-            document.getElementById('autocomplete'),
+            document.getElementById('id_city_name'),
             {
                 types: ['(regions)'],
                 componentRestrictions: {'country': ['IN']},
