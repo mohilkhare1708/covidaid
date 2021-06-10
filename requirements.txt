@@ -76,7 +76,6 @@ python-dotenv==0.17.0
 python3-openid==3.2.0
 pytz==2021.1
 pywin32==300
-pywinpty @ file:///C:/Users/mohil/Downloads/pywinpty-0.5.7-cp39-cp39-win_amd64.whl
 pyzmq==21.0.1
 qtconsole==5.0.2
 QtPy==1.9.0
