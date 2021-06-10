@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'places',
     'requests',
+    'django_heroku',
+    'gunicorn',
     # preinstalled
     'django.contrib.admin',
     'django.contrib.auth',
@@ -133,4 +135,8 @@ PLACES_MAPS_API_KEY='AIzaSyAYIDfu6OvKvXKZiSV3RvBZIEDWTSkomPw'
 PLACES_MAP_WIDGET_HEIGHT=480
 PLACES_MAP_OPTIONS='{"center": { "lat": 38.971584, "lng": -95.235072 }, "zoom": 10}'
 PLACES_MARKER_OPTIONS='{"draggable": true}'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
 
