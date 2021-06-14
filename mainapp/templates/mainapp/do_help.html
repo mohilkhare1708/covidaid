@@ -5,21 +5,23 @@
 {{title}}
 {% endblock %}
 {% block content %}
+
 <style>
-input {
-    margin-bottom: 15px;
-    margin-left: 3px;
-    margin-right: 3px;
-}
-form {
-    margin-top: 50px;
-    padding: 10px;
-    width: 70%;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-}
+    input {
+        margin-bottom: 15px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+    form {
+        margin-top: 50px;
+        padding: 10px;
+        width: 70%;
+        margin: 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 10px;
+    }
 </style>
+
 <section class="section section-header text-dark pb-md-8">
     <div class="container">
         <div class="row justify-content-center">
@@ -48,14 +50,11 @@ form {
 
                 </div>
             </div>
-            {% comment %} <div class="col-12 col-md-10 justify-content-center">
-                <img class="d-none d-md-inline-block" src="{% static 'images/nocovid.png' %}" alt="Mobile App Mockup"
-                    style="max-width=50% !important;">
-            </div> {% endcomment %}
         </div>
     </div>
 </section>
 {% endblock content%}
+
 {% block extrascripts %}
     <script>
     function initAutocomplete() {
