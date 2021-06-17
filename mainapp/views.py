@@ -152,12 +152,6 @@ def need_help(request):
     return render(request, 'mainapp/need_help.html', context)
 
 def results(request, cityName, req):
-    # req.append(cityName)
-    # print(req)
-    # req = req.strip('][').split(', ')
-    # print(req)
-    # twitter_streamer = TwitterStreamer()
-    # twitter_streamer.stream_tweets(req)
     headers = create_headers(bearer_token)
     rules = get_rules(headers, bearer_token)
     delete = delete_all_rules(headers, bearer_token, rules)
