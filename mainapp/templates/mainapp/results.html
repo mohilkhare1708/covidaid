@@ -11,7 +11,9 @@
                 </h1>
                 <p class="lead mb-4 mb-lg-5">Be careful while getting in touch with strangers on the internet.</p>
                 <div>
-                    
+                    {% for i in tweets %}
+                        <p>{{i}}</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>
