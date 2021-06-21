@@ -12,7 +12,27 @@
                 <p class="lead mb-4 mb-lg-5">Be careful while getting in touch with strangers on the internet.</p>
                 <div>
                     {% for i in tweets %}
-                        <p>{{i}}</p>
+                        <div class="tweet">
+                            <div class="tweet-head">
+                                <div class="tweet-image">
+                                <img src="https://source.unsplash.com/7_TTPznVIQI/50/" alt="avatar" />
+                                </div>
+                                <div class="tweet-author">
+                                <div class="name">John Smith</div>
+                                <div class="handle">@john_smith</div>
+                                </div>
+                            </div>
+                            <div class="tweet-body">
+                                <p id="tweet-text">{{i}}</p>
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="icons">
+                                <i class="fas fa-reply"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
                     {% endfor %}
                 </div>
             </div>
