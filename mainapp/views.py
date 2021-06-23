@@ -132,10 +132,10 @@ def need_help(request):
     return render(request, 'mainapp/need_help.html', context)
 
 def results(request, cityName, req):
-    headers = create_headers(bearer_token)
-    rules = get_rules(headers, bearer_token)
-    delete = delete_all_rules(headers, bearer_token, rules)
-    set = set_rules(headers, delete, bearer_token)
-    tweets = get_stream(headers, set, bearer_token)
-    print(tweets)
-    return render(request, 'mainapp/results.html', {'city' : cityName, 'req' : req, 'tweets' : tweets})
+    # headers = create_headers(bearer_token)
+    # rules = get_rules(headers, bearer_token)
+    # delete = delete_all_rules(headers, bearer_token, rules)
+    # set = set_rules(headers, delete, bearer_token)
+    # tweets = get_stream(headers, set, bearer_token)
+    # return render(request, 'mainapp/results.html', {'city' : cityName, 'req' : req, 'tweets' : tweets})
+    return render(request, 'mainapp/results.html', {'city' : cityName, 'req' : req})

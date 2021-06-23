@@ -2,6 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
+
 <section class="section section-header text-dark pb-md-8">
     <div class="container">
         <div class="row justify-content-center">
@@ -10,8 +11,53 @@
                     Here's what we have for you! :D
                 </h1>
                 <p class="lead mb-4 mb-lg-5">Be careful while getting in touch with strangers on the internet.</p>
-                <div>
-                    {% for i in tweets %}
+                <div class="slides">
+                    <div id="slide">
+                        <div class="tweet">
+                            <div class="tweet-head">
+                                <div class="tweet-image">
+                                <img src="https://source.unsplash.com/7_TTPznVIQI/50/" alt="avatar" />
+                                </div>
+                                <div class="tweet-author">
+                                <div class="name">John Smith</div>
+                                <div class="handle">@john_smith</div>
+                                </div>
+                            </div>
+                            <div class="tweet-body">
+                                <p id="tweet-text">boobs</p>
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="icons">
+                                <i class="fas fa-reply"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="slide">
+                        <div class="tweet">
+                            <div class="tweet-head">
+                                <div class="tweet-image">
+                                <img src="https://source.unsplash.com/7_TTPznVIQI/50/" alt="avatar" />
+                                </div>
+                                <div class="tweet-author">
+                                <div class="name">John Smith</div>
+                                <div class="handle">@john_smith</div>
+                                </div>
+                            </div>
+                            <div class="tweet-body">
+                                <p id="tweet-text">boobs</p>
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="icons">
+                                <i class="fas fa-reply"></i>
+                                <i class="fas fa-retweet"></i>
+                                <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% comment %} {% for i in tweets %}
                         <div class="tweet">
                             <div class="tweet-head">
                                 <div class="tweet-image">
@@ -33,7 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
+                    {% endfor %} {% endcomment %}
                 </div>
             </div>
         </div>
